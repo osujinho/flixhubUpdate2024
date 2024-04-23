@@ -1,0 +1,446 @@
+// Movie
+"https://api.themoviedb.org/3/movie/240832?api_key=20273c51e3e2e33ccf30874850c5e3b5&append_to_response=release_dates%2Cwatch%2Fproviders%2Ccredits%2Cvideos%2Cimages%2Creviews&include_image_language=en,null"
+
+"https://api.themoviedb.org/3/tv/1396/season/5/episode/14?api_key=20273c51e3e2e33ccf30874850c5e3b5&append_to_response=external_ids%2Cvideos%2Cimages%2Cwatch%2Fproviders&language=en-US&include_image_language=en,null"
+
+"https://api.themoviedb.org/3/tv/1396/season/5?api_key=20273c51e3e2e33ccf30874850c5e3b5&append_to_response=videos%2Cimages%2Cwatch%2Fproviders&language=en-US&include_image_language=en,null"
+
+
+"https://api.themoviedb.org/3/collection/1241?api_key=20273c51e3e2e33ccf30874850c5e3b5&append_to_response=images&include_image_language=en,null"
+
+// Discover
+
+.lte = highest
+.gte = lowest
+
+For example rating.gte = 5, rating.lte = 9 (returns movies of rating between 5-9)
+
+// Certification
+"https://api.themoviedb.org/3/discover/movie?api_key=THE_KEY&language=en-US&region=US&sort_by=popularity.desc&certification_country=US&certification=PG&page=1"
+
+needs: language, region, certification_country, sort_by, page
+
+
+// Genre
+needs: language, page, sort_by
+
+orGenre - "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=primary_release_date.desc&with_genres=12%7C878"
+
+andGenre - "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=primary_release_date.desc&with_genres=12%2C878%2C14"
+
+
+// Rating/Vote Average -
+"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc&vote_average.gte=5&vote_average.lte=9"
+
+needs - language, page, sort_by
+
+//Watch providers
+"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&watch_region=US&with_watch_providers=8"
+
+needs - language, page, watch_region, sort_by
+
+// Year
+"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_date.gte=2009-01-01&primary_release_date.lte=2011-12-31&sort_by=popularity.desc&with_genres=10749%2C35"
+needs - language, page, sort_by
+
+// Discover Movie
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 970870,
+      "original_language": "en",
+      "original_title": "Barry's Last Shot",
+      "overview": "A love-struck American musician who repairs broken saxophones and clarinets for a living flies to the Czech Republic in pursuit of a wife to bring back home.",
+      "popularity": 1.972,
+      "poster_path": null,
+      "release_date": "2011-01-01",
+      "title": "Barry's Last Shot",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 900329,
+      "original_language": "ko",
+      "original_title": "우리는 하늘을 날았다",
+      "overview": "It's cold outside. A young couple, Eunyoung and Seungki, are on a date at the park. They seem happy just having some beer and listening to music together, but it turns out that they lost big time on the stock market and have a big debt in front of them. As they talk about the subject they start blaming each other and have a big fight. Eunyoung bursting into anger tells Seungki she's going to go meet a rich prospective husband which her mother set up for her.",
+      "popularity": 1.685,
+      "poster_path": "/mH3ELYSyhjlAbkwNA9wzJe29PhA.jpg",
+      "release_date": "2011-01-01",
+      "title": "We Fly High",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uIMxITsOFR3ltb7Mi69cT8DuN06.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        35
+      ],
+      "id": 898503,
+      "original_language": "zh",
+      "original_title": "Don’t Miss If You Love Me",
+      "overview": "",
+      "popularity": 1.213,
+      "poster_path": "/5EFGxsXUvRNyCths6TxExuxuXpA.jpg",
+      "release_date": "2011-01-01",
+      "title": "Don’t Miss If You Love Me",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ],
+      "id": 533191,
+      "original_language": "ne",
+      "original_title": "मोड्याल्नी",
+      "overview": "A love story that also focuses on the culture of the Magar people of Nepal",
+      "popularity": 0.6,
+      "poster_path": null,
+      "release_date": "2011-01-01",
+      "title": "Lokanti (Modyalni)",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 509090,
+      "original_language": "en",
+      "original_title": "Turkey Day",
+      "overview": "Tommy loves Andi. Andi isn't sure she loves Tommy. Andi's family hates Tommy. So when Andi, secretly pregnant, runs home for Thanksgiving and Tommy follows, her dad and older brother have a serious bone to pick.",
+      "popularity": 0.6,
+      "poster_path": "/lRNgpYtz2UxYmdhpbvjHJrl6IrF.jpg",
+      "release_date": "2011-01-01",
+      "title": "Turkey Day",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/d9Cjb4Jm0JXSgnaf2ypY9NstYkh.jpg",
+      "genre_ids": [
+        28,
+        35,
+        14,
+        10749
+      ],
+      "id": 438960,
+      "original_language": "ja",
+      "original_title": "愛裸武戦隊アイリンジャー",
+      "overview": "The time is 20XX, Japan has been invaded and is now ruled by the evil secret society “Die! Die! Die! Die! Squadron” which aims to dominate the world. Japanese society grinds to a halt as the population is so confused by the squadron. Airi Owashi (Jessica Kisaki), the leader of the Love Rangers, and named Ranger Red, is kidnapped by the squadron and transformed into a mechanitron for their world invasion project. However, Airi manages to escape and gets back with her old comrades, Rami Samejima (Airi Kijima), Love Ranger Blue, and Buritoni Hyodo (Aoi Hozumi), Love Ranger Yellow. They continue fighting against “Die! Die! Die! Die! Squadron” to save the world and bring peace and harmony. The Three girls’ mottos are “Love, Friendship, Passion, Union and Victory!” Will the power of their love be able to save the world? The dangerous battle between Love Ranger and “Die! Die! Die! Die! Squadron” begins!",
+      "popularity": 2.928,
+      "poster_path": "/hG4qd5AKgDLjj2ZHB6LcqjtQYGo.jpg",
+      "release_date": "2011-01-01",
+      "title": "The Love Ranger",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 397239,
+      "original_language": "ka",
+      "original_title": "სიყვარულის ბალადა",
+      "overview": "",
+      "popularity": 0.627,
+      "poster_path": "/xk1w5Tmix6ZXxO8cad0vqYjahxO.jpg",
+      "release_date": "2011-01-01",
+      "title": "The Ballad of Love",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 303025,
+      "original_language": "en",
+      "original_title": "Mikey's Extreme Romance",
+      "overview": "Comedy -  It's not stalking - it's extreme romance! Mikey's video diary is a warts-and-all tour into obsession, striving to be the best and confronting our own fears in the pursuit of love. Part educational, part romance, and completely wrong, this feature comedy is the ultimate celebration of dedication, the anti-hero, and home security.  -  Jessie McKay, Bill Keir, Pauline Lander",
+      "popularity": 0.916,
+      "poster_path": "/roPhmfvHyxXoqw1ZcIjMGne26Oi.jpg",
+      "release_date": "2011-01-01",
+      "title": "Mikey's Extreme Romance",
+      "video": false,
+      "vote_average": 5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 301049,
+      "original_language": "en",
+      "original_title": "Trophy Kids",
+      "overview": "To win the celebrity and self-made wealth he craves, an aimless, twenty-something Manhattan playboy devises a film based on his party-boy, club-going lifestyle, and hires a self-destructive aspiring playwright to ghost the feature script. As the mismatched pair struggles to complete the script and get a handle on their misdirected lives, they reveal the sometimes comedic, sometimes tragic behaviors of 'Generation Y'- a generation taught to believe each was incomparably special and messianically gifted. Though they begin to vie for the affections of the same girl, and their chance at success and happiness threatens to crumble, they ultimately each find their own, unique life truths.",
+      "popularity": 1.146,
+      "poster_path": "/oPTbyNhN1ZOLpjRs6vKDZwaOFzj.jpg",
+      "release_date": "2011-01-01",
+      "title": "Trophy Kids",
+      "video": false,
+      "vote_average": 5.6,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 293341,
+      "original_language": "fr",
+      "original_title": "J'aurais pu être une pute",
+      "overview": "Mina has a panic attack at the checkout of a DIY shop and falls into Pierre's arms. This is the story of a slightly mad girl, a guy who's too normal, a big pair of pruning shears and an old piano teacher.",
+      "popularity": 1.949,
+      "poster_path": "/sTZylXcDl2iHhIPP0zPyDJeDtSn.jpg",
+      "release_date": "2011-01-01",
+      "title": "I Could've Been a Hooker",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eYw5FAKCBFOVAljlYI1rDMEbdqR.jpg",
+      "genre_ids": [
+        35,
+        53,
+        10749
+      ],
+      "id": 223307,
+      "original_language": "en",
+      "original_title": "Over the Edge",
+      "overview": "Jason (Danny Bedford) is in a crisis. He won’t go to work and stays holed up in his flat. But when his TV breaks, he is forced to call co-worker Richard (Sean Hart) to fix it. All is normal, except when Jason mentions that a friend of his may be dead in his bed. Instead of hightailing it out of the potential murder scene, Richard (who has the hots for Jason) instead not only checks the body (yes, dead) but also proposes a homemade autopsy. And when the scalpel cuts the flesh, these two young men are now in it together. But it is not just one body, a serial killer is roaming London’s streets, but the bodies seem to all end up in Jason’s flat.",
+      "popularity": 1.96,
+      "poster_path": "/mKce13RuJ2BgULUN4UYASkbQOX2.jpg",
+      "release_date": "2011-01-01",
+      "title": "Over the Edge",
+      "video": false,
+      "vote_average": 4.2,
+      "vote_count": 11
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18,
+        35,
+        10749
+      ],
+      "id": 129902,
+      "original_language": "en",
+      "original_title": "Playing for Keeeps",
+      "overview": "Lesson 1: Everyone gambles, but not everyone loses. Lesson 2: The world is full of traps. Lesson 3: You cannot win if you don't take risks.",
+      "popularity": 0.6,
+      "poster_path": null,
+      "release_date": "2011-01-01",
+      "title": "Playing for Keeeps",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        27,
+        10749
+      ],
+      "id": 117546,
+      "original_language": "en",
+      "original_title": "Trippin'",
+      "overview": "A group of three friends head to a cabin in the woods for the weekend. On their way they discover an arm in the road, blood coming from something wrapped in the back of a truck, and other strange things that unfold before their eyes. They plan on a weekend of partying, boozing, drugs and sex. Of course there is a campfire tale of a killer in the woods, the kids get split up, and the blood starts to flow.",
+      "popularity": 1.4,
+      "poster_path": null,
+      "release_date": "2011-01-01",
+      "title": "Trippin'",
+      "video": false,
+      "vote_average": 3.3,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rXQ5LyECNA7u6jcFkUeKxxxnK9g.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 109437,
+      "original_language": "en",
+      "original_title": "Valley of the Sun",
+      "overview": "Andy Taggert set out for Hollywood to pursue acting, but years later finds himself working in adult films. Disillusioned and trapped, Andy walks off the set and lands himself in a mental hospital. His estranged parents pick him up and take him to their Arizona retirement community where Andy’s troubles seemingly all but disappear until his past unexpectedly comes back to haunt him.",
+      "popularity": 2.167,
+      "poster_path": "/1cnvBnEAPC3ylSjU8fTstuZ990v.jpg",
+      "release_date": "2011-01-01",
+      "title": "Valley of the Sun",
+      "video": false,
+      "vote_average": 4.4,
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 89088,
+      "original_language": "is",
+      "original_title": "Okkar eigin Osló",
+      "overview": "The comedy Our Own Oslo is an everyday love story. We follow the strained courtship of the wildly differing Harald, forty year old engineer and Vilborg, an unemployed single mother. They are both tangled up in their own pasts and their attempts at love end in disaster.",
+      "popularity": 1.4,
+      "poster_path": "/qJVHBndOunLNonAoyQ53ls1fBeQ.jpg",
+      "release_date": "2011-01-01",
+      "title": "Our Own Oslo",
+      "video": false,
+      "vote_average": 4.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 76624,
+      "original_language": "en",
+      "original_title": "The Ride of Tom & Valkyrie",
+      "overview": "This is the story of the heroic psychological journey of Tom, a depressed insomniac locked in a small Chinatown studio that he's afraid to leave. Grieving the loss of his wife and daughter, and tormented by memories of a dysfunctional family, he hallucinates about his childhood heroes: Ben Franklin, a samurai, a '70's sitcom star, and a comic book hero--all of whom help Tom in his struggle to maintain his sanity. Meanwhile, Valkyrie, Tom's beautiful neighbor--whom he has never met--zips across Manhattan on series of disastrous blind dates in pursuit of her goal \"to find the last real man in New York City, by midnight, tonight.",
+      "popularity": 0.6,
+      "poster_path": null,
+      "release_date": "2011-01-01",
+      "title": "The Ride of Tom & Valkyrie",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nny0kzcdZ0LJs3iDCmj3s9TLpj0.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 69863,
+      "original_language": "en",
+      "original_title": "Married Men and Single Women",
+      "overview": "When 3 married men decide to step out on their marriages, they find that infidelity has unpredictable &amp; devastating consequences. Betrayal, hypocrisy, racism, &amp; several other matters surface as married men and single women come together.",
+      "popularity": 0.663,
+      "poster_path": "/kck7zBmjmNniNewXyRaPTL2OPbG.jpg",
+      "release_date": "2011-01-01",
+      "title": "Married Men and Single Women",
+      "video": false,
+      "vote_average": 2.2,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 797485,
+      "original_language": "es",
+      "original_title": "En la próxima parada",
+      "overview": "",
+      "popularity": 0.6,
+      "poster_path": "/18GUv05hxPu7KMCV2Sat8YkDkUb.jpg",
+      "release_date": "2011-01-02",
+      "title": "En la próxima parada",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18,
+        35,
+        10749
+      ],
+      "id": 547883,
+      "original_language": "en",
+      "original_title": "Summertime",
+      "overview": "Eight people unknowingly form a circle – either through a friendship, attempted love, or brief sexual encounter. The tighter their circle gets, the more the spokes begin to twist and to bend.",
+      "popularity": 1.54,
+      "poster_path": "/sdRYUVqpNDr2sGpjiXnDVf4IvTU.jpg",
+      "release_date": "2011-01-02",
+      "title": "Summertime",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        10749,
+        35
+      ],
+      "id": 788071,
+      "original_language": "ru",
+      "original_title": "Зимний сон",
+      "overview": "",
+      "popularity": 0.6,
+      "poster_path": "/o4mfp0Wrh57G0uZ085xSVjlmA0.jpg",
+      "release_date": "2011-01-03",
+      "title": "A Winter Dream",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    }
+  ],
+  "total_pages": 21,
+  "total_results": 414
+}
